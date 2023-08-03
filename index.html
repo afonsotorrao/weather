@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's the Weather?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="searchBar">
+            <div class="search">
+                <input id = "input" type="text" placeholder = "Search Location">
+                <button type = "button" id = "searchBtn">Go!</button>
+                <p id = alertMsg>Please choose a valid location.</p>
+            </div>
+            <div class="switch">
+                <label class="toggle">
+                    <input type="checkbox" id = "tempToggle" >
+                    <span class="slider"></span>
+                    <span class="labels" data-on="º F" data-off="º C"></span>
+                </label>
+            </div>
+        </div>
+        <div class="main">
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+</body>
+</html>
+
+<script src="script.js"></script>

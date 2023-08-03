@@ -1,0 +1,236 @@
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color:white
+}
+
+input {
+  background-color:transparent;
+  border: none;
+  outline:transparent;
+  padding:2%;
+  font-size:16px;
+  font-weight:bold;
+  width:14%;
+  overflow: hidden;
+}
+
+img {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+  aspect-ratio:1/1;
+  height:80%;
+}
+
+button {
+  border:solid white 2px;
+  background-color: transparent;
+  color:white;
+  border-radius: 1em;
+  padding:1%;
+  width:6%;
+  cursor:pointer;
+  font-weight: bold;
+  font-size:16px
+}
+
+button:hover {
+  color:#2196F3;
+  border-color:#2196F3
+
+}
+
+.content {
+    height:100vh;
+    width:100vw;
+    display:grid;
+    grid-template-rows: 10% 80% 10%;
+    background-image: url('images/sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
+
+
+.searchBar {
+    display:grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows:80% 20%;
+    padding:1.5%;
+}
+
+#alertMsg {
+  margin-left:2%;
+  font-size:14px;
+  color:red;
+  display:none
+}
+
+.switch {
+    display:flex;
+    justify-content: center;
+}
+
+.switch label {
+  margin-top:10%;
+  margin-bottom:auto;
+  grid-column:1/2;
+  font-weight:bold
+}
+
+.toggle {
+    --width: 80px;
+    --height: calc(var(--width) / 2.5);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+  }
+
+  .toggle input {
+    display: none;
+  }
+
+  .toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .toggle input:checked+.slider {
+    background-color: #4d4d4d;
+  }
+
+  .toggle input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+  }
+  
+.toggle .labels {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 12.5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 12.5%;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle input:checked~.labels::after {
+    opacity: 0;
+}
+
+.toggle input:checked~.labels::before {
+    opacity: 1;
+}
+
+.main {
+  height:70%;
+  margin-top:10%;
+  margin-left:10%;
+  margin-bottom:10%;
+  display:grid;
+  grid-template-rows: 20% 30% 1% 40%;
+}
+
+.location {
+  font-size: 24px;
+  padding:1%;
+}
+
+.temperature {
+  display:grid;
+  grid-template-columns: 20% 20% 60%;
+}
+
+.temp, .feels {
+  display:grid;
+  grid-template-rows: 20% 50%;
+  text-align:center
+}
+
+.text, .number {
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.number {
+  font-size:44px;
+  font-weight:bold
+}
+
+.line {
+  background-color:white;
+  height:35%;
+  width:42%;
+}
+
+.info {
+  width:42%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cell {
+  display:grid;
+  grid-template-rows: 40% 30%;
+  text-align:center;
+  margin-top:18%;
+  height:100%;
+  width:100%;
+}
+
+.cell p {
+  margin-top:auto;
+  margin-bottom:auto;
+  font-size:18px;
+  font-weight:bold
+}
